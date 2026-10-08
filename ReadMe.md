@@ -11,6 +11,9 @@ Windows 11 [since 24H2](https://github.com/ufrisk/MemProcFS/blob/a81e7960d6f17a4
 * Print a progress indicator.
 
 
+----
+
+
 # winmem_decompress.py
 
 This program tries to extract compressed memory pages from page-aligned data.
