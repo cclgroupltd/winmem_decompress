@@ -1,3 +1,16 @@
+# winmem_decompress_lz4.py
+
+Windows 11 [since 24H2](https://github.com/ufrisk/MemProcFS/blob/a81e7960d6f17a4adfc77c080f94e631d74b2fb9/vmm/mm/mm_win.c#L1065) uses the LZ4 algorithm to compress memory pages.
+
+`winmem_decompress_lz4.py` is based on Maxim Suhanov's `winmem_decompress.py`. It replaces the LZ77 decompressor present in the original script with an LZ4 decompressor based on python-lz4. It uses the [same strategy as the original version](https://dfir.ru/2018/09/08/memory-compression-and-forensics/) and therefore has similar limitations.
+
+## Changes
+* Replace LZ77DecompressBuffer with an LZ4 decompressor (requires python-lz4).
+* Run more than 4 parallel tasks.
+* Save the output to a specified file.
+* Print a progress indicator.
+
+
 # winmem_decompress.py
 
 This program tries to extract compressed memory pages from page-aligned data.
